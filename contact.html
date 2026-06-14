@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Root</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌸 Root</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        </div>
+    </nav>
+
+    <header class="hero hero-small">
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <section class="contact-content">
+            <p>Have a question, custom order request, or just want to say hi? We'd love to hear from you!</p>
+            <form action="https://formsubmit.co/nisreenfareed8888@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New message from Root website!">
+                <input type="hidden" name="_captcha" value="false">
+                <label>Name *</label>
+                <input type="text" name="name" required>
+                <label>Email *</label>
+                <input type="email" name="email" required>
+                <label>Message *</label>
+                <textarea name="message" required rows="5" placeholder="Your message..."></textarea>
+                <button type="submit" class="order-btn submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Root – Handmade with 💛 in Sweden</p>
+        <p>Delivery within Sweden only</p>
+    </footer>
+</body>
+</html>

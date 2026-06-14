@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Root – Handmade Flower Bouquets & Candle Arrangements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🌸 Root</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Root</h1>
+        <p>Handmade pipe cleaner flowers & candle bouquets crafted with love in Sweden 🌷</p>
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Our Products</h2>
+            <p class="subtitle">Every bouquet is unique and handmade with care</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img placeholder">🌺<br><small>Photo coming soon</small></div>
+                    <h3>Pipe Cleaner Bouquet – Small</h3>
+                    <p class="price">149 kr</p>
+                    <p>A charming small bouquet of handmade pipe cleaner flowers.</p>
+                    <button class="order-btn" onclick="orderProduct('Pipe Cleaner Bouquet – Small, 149 kr')">Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img placeholder">💐<br><small>Photo coming soon</small></div>
+                    <h3>Pipe Cleaner Bouquet – Large</h3>
+                    <p class="price">249 kr</p>
+                    <p>A larger bouquet with mixed pipe cleaner flowers in joyful colours.</p>
+                    <button class="order-btn" onclick="orderProduct('Pipe Cleaner Bouquet – Large, 249 kr')">Order</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-img placeholder">🕯️<br><small>Photo coming soon</small></div>
+                    <h3>Flower Candle Bouquet</h3>
+                    <p class="price">199 kr</p>
+                    <p>Handmade flower arrangement with candles – a perfect gift.</p>
+                    <button class="order-btn" onclick="orderProduct('Flower Candle Bouquet, 199 kr')">Order</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="orderModal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Place Your Order</h2>
+                <p id="orderProduct"></p>
+                <form id="orderForm" action="https://formsubmit.co/nisreenfareed8888@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New order from Root!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="product" id="produktField">
+                    <label>Name *</label>
+                    <input type="text" name="name" required>
+                    <label>Email *</label>
+                    <input type="email" name="email" required>
+                    <label>Phone</label>
+                    <input type="tel" name="phone">
+                    <label>Delivery Address (Sweden only) *</label>
+                    <textarea name="address" required placeholder="Street, postal code, city"></textarea>
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Colour preferences, occasion, etc."></textarea>
+                    <button type="submit" class="order-btn submit-btn">Send Order</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Root – Handmade with 💛 in Sweden</p>
+        <p>Delivery within Sweden only</p>
+    </footer>
+
+    <script>
+        function orderProduct(product) {
+            document.getElementById('orderProduct').textContent = 'Product: ' + product;
+            document.getElementById('produktField').value = product;
+            document.getElementById('orderModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+        window.onclick = function(e) {
+            if (e.target === document.getElementById('orderModal')) closeModal();
+        }
+    </script>
+</body>
+</html>
