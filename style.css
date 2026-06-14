@@ -66,6 +66,14 @@ nav {
 .logo:hover {
     transform: scale(1.1) rotate(-3deg);
 }
+.logo-img {
+    height: 45px;
+    width: auto;
+    transition: transform 0.3s;
+}
+.logo-img:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
 .nav-links a {
     text-decoration: none;
     color: #6c5ce7;
