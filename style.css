@@ -316,6 +316,9 @@ nav {
     outline: 1px solid rgba(0,0,0,0.05);
     outline-offset: -1px;
 }
+.product-img + .product-img {
+    margin-top: 0.5rem;
+}
 .product-img img {
     width: 100%;
     aspect-ratio: 4/5;
