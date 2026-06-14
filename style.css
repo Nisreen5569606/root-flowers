@@ -45,7 +45,8 @@ nav {
 }
 .brand {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
+    font-weight: 700;
     font-style: italic;
     text-decoration: none;
     color: var(--petal-600);
@@ -172,6 +173,9 @@ nav {
 }
 .collection-card {
     transition: transform 0.4s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 .collection-card:hover {
     transform: translateY(-4px);
