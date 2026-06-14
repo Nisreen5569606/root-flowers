@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact – Root</title>
+    <title>Contact — Root</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="Root.png" alt="Root" class="logo-img"></a>
+            <a href="index.html" class="brand">Root</a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -19,13 +22,13 @@
         </div>
     </nav>
 
-    <header class="hero hero-small">
-        <h1>Contact Us</h1>
-    </header>
+    <section class="page-hero">
+        <h1>Get in <em>Touch</em></h1>
+    </section>
 
-    <main>
-        <section class="contact-content">
-            <p>Have a question, custom order request, or just want to say hi? We'd love to hear from you!</p>
+    <section class="contact-section">
+        <div class="contact-content">
+            <p>Have a question, custom order request, or just want to say hi? We'd love to hear from you.</p>
             <form action="https://formsubmit.co/root27814@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New message from Root website!">
                 <input type="hidden" name="_captcha" value="false">
@@ -35,14 +38,20 @@
                 <input type="email" name="email" required>
                 <label>Message *</label>
                 <textarea name="message" required rows="5" placeholder="Your message..."></textarea>
-                <button type="submit" class="order-btn submit-btn">Send Message</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <p>© 2026 Root – Handmade with 💛 in Sweden</p>
-        <p>Delivery within Sweden only</p>
+        <div class="footer-content">
+            <span class="brand">Root</span>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© 2026 Root. Handmade in Sweden.</p>
+        </div>
     </footer>
 </body>
 </html>
