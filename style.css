@@ -32,36 +32,36 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #f5c6d0;
-    border-bottom: 1px solid rgba(139, 58, 63, 0.08);
+    background: var(--petal-100);
+    border-bottom: 1px solid rgba(139, 58, 63, 0.05);
 }
 .nav-container {
     max-width: 1200px;
     margin: auto;
-    padding: 0.8rem 2rem;
+    padding: 1.2rem 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 .brand {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.4rem;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 400;
     font-style: italic;
     text-decoration: none;
-    color: var(--petal-600);
-    letter-spacing: -0.5px;
+    color: var(--petal-950);
+    letter-spacing: -0.3px;
 }
 .nav-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 3rem;
 }
 .nav-links a {
     text-decoration: none;
-    color: var(--petal-600);
-    font-size: 0.85rem;
+    color: var(--petal-950);
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.25em;
     transition: color 0.3s;
 }
 .nav-links a:hover, .nav-links a.active {
@@ -78,7 +78,7 @@ nav {
 
 /* Hero */
 .hero {
-    padding: 4rem 2rem;
+    padding: 8rem 2rem;
     max-width: 1200px;
     margin: auto;
 }
@@ -114,25 +114,26 @@ nav {
     align-items: center;
     margin-top: 1.5rem;
     padding: 0.7rem 1.8rem;
-    background: var(--petal-600);
+    background: var(--petal-950);
     color: var(--petal-100);
     border: none;
-    border-radius: 50px;
-    font-size: 0.9rem;
+    border-radius: 2px;
+    font-size: 0.75rem;
     font-family: 'Karla', sans-serif;
     font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: opacity 0.3s;
 }
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(139, 58, 63, 0.2);
+    opacity: 0.8;
 }
 .btn-sm {
     margin-top: 1rem;
-    padding: 0.5rem 1.4rem;
-    font-size: 0.85rem;
+    padding: 0.6rem 1.6rem;
+    font-size: 0.7rem;
 }
 
 /* Video section */
@@ -151,7 +152,7 @@ nav {
 /* Collections */
 .collections {
     background: rgba(245, 213, 207, 0.2);
-    padding: 5rem 2rem;
+    padding: 10rem 2rem;
 }
 .section-header {
     max-width: 1200px;
@@ -215,7 +216,7 @@ nav {
 
 /* Story */
 .story {
-    padding: 6rem 2rem;
+    padding: 12rem 2rem;
     max-width: 1200px;
     margin: auto;
 }
@@ -271,7 +272,7 @@ nav {
 .cta {
     max-width: 1200px;
     margin: 0 auto 5rem;
-    padding: 4rem 2rem;
+    padding: 8rem 2rem;
     text-align: center;
     background: rgba(196, 120, 122, 0.08);
     border-radius: 16px;
@@ -300,7 +301,7 @@ nav {
 .filter-btn {
     padding: 0.6rem 1.6rem;
     border: 1px solid rgba(139, 58, 63, 0.2);
-    border-radius: 50px;
+    border-radius: 2px;
     background: white;
     font-family: 'Karla', sans-serif;
     font-size: 0.9rem;
@@ -524,7 +525,7 @@ input:focus, textarea:focus {
 /* Footer */
 footer {
     border-top: 1px solid rgba(139, 58, 63, 0.08);
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem;
 }
 .footer-content {
     max-width: 1200px;
@@ -533,16 +534,16 @@ footer {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 .footer-links {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 .footer-links a {
     text-decoration: none;
     color: var(--petal-600);
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     transition: color 0.3s;
@@ -551,7 +552,7 @@ footer {
     color: var(--petal-400);
 }
 footer p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--petal-400);
 }
 
@@ -573,10 +574,14 @@ footer p {
 .cart-btn {
     background: none;
     border: none;
-    font-size: 1.3rem;
+    font-size: 0.8rem;
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
     cursor: pointer;
     position: relative;
     padding: 0.3rem;
+    color: var(--petal-600);
 }
 .cart-badge {
     position: absolute;
@@ -630,10 +635,10 @@ footer p {
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: var(--petal-600);
+    background: var(--petal-950);
     color: white;
     padding: 0.8rem 1.5rem;
-    border-radius: 50px;
+    border-radius: 4px;
     font-size: 0.9rem;
     z-index: 300;
     opacity: 0;

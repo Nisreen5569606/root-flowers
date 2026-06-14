@@ -33,7 +33,7 @@ function updateCartBadge() {
 function showCartNotification(name) {
     var n = document.createElement('div');
     n.className = 'cart-notification';
-    n.textContent = '✓ ' + name + ' added to cart';
+    n.textContent = name + ' — added to selection';
     document.body.appendChild(n);
     setTimeout(() => n.classList.add('show'), 10);
     setTimeout(() => { n.classList.remove('show'); setTimeout(() => n.remove(), 300); }, 2000);

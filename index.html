@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Root — Handmade Flowers, Pipe Cleaner Blooms & Candles</title>
+    <title>Root — Handmade Flowers, Sculpted Blooms & Candles</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,11 +15,12 @@
         <div class="nav-container">
             <a href="index.html" class="brand">Root</a>
             <div class="nav-links">
-                <a href="products.html">Products</a>
-                <a href="#story">Our Story</a>
-                <a href="shipping.html">Shipping</a>
+                <a href="index.html">Home</a>
+                <a href="products.html">Collection</a>
+                <a href="about.html">Atelier</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <button class="cart-btn" onclick="openCart()">Cart <span id="cartBadge" class="cart-badge">0</span></button>
             <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
         </div>
     </nav>
@@ -33,9 +34,9 @@
                 </video>
             </div>
             <div class="hero-text">
-                <h1>Kindness in every <em>bloom</em>.</h1>
-                <p>A boutique collection of everlasting pipe cleaner flowers and hand-crafted botanical candle bouquets. Made with love in Sweden.</p>
-                <a href="#collections" class="btn">Explore the Garden</a>
+                <h1>Sculpted by hand. Rooted in <em>Sweden</em>.</h1>
+                <p>A boutique collection of everlasting sculpted blooms and hand-crafted botanical candle arrangements.</p>
+                <a href="#collections" class="btn">Discover the Collection</a>
             </div>
         </div>
     </section>
@@ -43,7 +44,7 @@
     <!-- Collections -->
     <section id="collections" class="collections">
         <div class="section-header">
-            <h2>Our Creations</h2>
+            <h2>The Collection</h2>
         </div>
         <div class="collection-grid">
             <a href="product-blush.html" class="collection-card">
@@ -59,7 +60,7 @@
                     <img src="images/it-was-all yellow.jpg" alt="It Was All Yellow">
                 </div>
                 <h3>It Was All Yellow</h3>
-                <p>Sunshine pipe cleaner bouquet with yellow lilies, tulips, and daisies.</p>
+                <p>Sunshine sculpted bouquet with yellow lilies, tulips, and daisies.</p>
                 <span class="price">349 kr</span>
             </a>
             <a href="product-olivljus.html" class="collection-card">
@@ -77,12 +78,12 @@
     <section id="story" class="story">
         <div class="story-grid">
             <div class="story-image">
-                <img src="images/love.jpg" alt="Our creative studio">
+                <img src="images/studio.jpg" alt="Our creative studio">
             </div>
             <div class="story-text">
-                <span class="label">Our Heart</span>
+                <span class="label">Our Atelier</span>
                 <h2>Born from a need for <em>colour</em></h2>
-                <p>I'm Nisreen, a 26-year-old programmer from Iraq living in Sweden. After long days of coding, I needed something to add colour and creativity to my routine — so I started making pipe cleaner flowers. The idea grew, and soon candles followed.</p>
+                <p>I'm Nisreen, a programmer from Iraq living in Sweden. After long days of coding, I needed something to add colour and creativity to my routine — so I started sculpting flowers from textile. The idea grew, and soon candles followed.</p>
                 <p>My mum and I create everything together. We love putting our touch into art, making each piece a little reflection of us. Root is our shared joy — handmade with love, one bloom at a time.</p>
                 <a href="about.html" class="link">Read more about us →</a>
             </div>
@@ -91,9 +92,9 @@
 
     <!-- CTA -->
     <section class="cta">
-        <h2>Bring the garden indoors</h2>
-        <p>Delivery within Sweden. Every piece handmade with care.</p>
-        <a href="#collections" class="btn">Shop Now</a>
+        <h2>Each piece, a quiet celebration</h2>
+        <p>Handcrafted to order. Delivered within Sweden.</p>
+        <a href="#collections" class="btn">View Collection</a>
     </section>
 
     <!-- Order Modal -->
@@ -126,8 +127,9 @@
         <div class="footer-content">
             <span class="brand">Root</span>
             <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="shipping.html">Shipping</a>
+                <a href="products.html">Collection</a>
+                <a href="about.html">Atelier</a>
+                <a href="shipping.html">Delivery</a>
                 <a href="contact.html">Contact</a>
             </div>
             <p>© 2026 Root. Handmade in Sweden.</p>
@@ -147,5 +149,6 @@
             if (e.target === document.getElementById('orderModal')) closeModal();
         }
     </script>
+    <script src="cart.js"></script>
 </body>
 </html>
