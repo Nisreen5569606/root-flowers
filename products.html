@@ -36,24 +36,42 @@
 
         <div class="product-grid">
             <div class="product-card" data-category="candle">
-                <div class="product-img"><img src="images/olivljus (1).png" alt="Små Olivljus"></div>
-                <div class="product-img secondary"><img src="images/olivljus (2).png" alt="Små Olivljus – top view"></div>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/olivljus (1).png" alt="Små Olivljus">
+                        <img src="images/olivljus (2).png" alt="Små Olivljus – top view">
+                    </div>
+                    <button class="slide-btn prev" onclick="slide(this,-1)">‹</button>
+                    <button class="slide-btn next" onclick="slide(this,1)">›</button>
+                </div>
                 <h3>Små Olivljus</h3>
                 <p>A handmade bouquet of small olive-green flower candles, nestled in decorative moss and wrapped in tissue paper with a satin ribbon. Each flower is individually crafted in wax.</p>
                 <span class="price">350 kr</span>
                 <button class="btn btn-sm" onclick="orderProduct('Små Olivljus, 350 kr')">Order</button>
             </div>
             <div class="product-card" data-category="candle">
-                <div class="product-img"><img src="images/blush (1).png" alt="Blush"></div>
-                <div class="product-img secondary"><img src="images/blush (2).png" alt="Blush – top view"></div>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/blush (1).png" alt="Blush">
+                        <img src="images/blush (2).png" alt="Blush – top view">
+                    </div>
+                    <button class="slide-btn prev" onclick="slide(this,-1)">‹</button>
+                    <button class="slide-btn next" onclick="slide(this,1)">›</button>
+                </div>
                 <h3>Blush</h3>
                 <p>A romantic bouquet of blush pink and white flower candles in a burgundy gift box, adorned with delicate lace and a pink satin ribbon. Elegant and perfect for gifting.</p>
                 <span class="price">350 kr</span>
                 <button class="btn btn-sm" onclick="orderProduct('Blush, 350 kr')">Order</button>
             </div>
             <div class="product-card" data-category="candle">
-                <div class="product-img"><img src="images/Dust (1).png" alt="Dust"></div>
-                <div class="product-img secondary"><img src="images/Dust (2).png" alt="Dust – top view"></div>
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/Dust (1).png" alt="Dust">
+                        <img src="images/Dust (2).png" alt="Dust – top view">
+                    </div>
+                    <button class="slide-btn prev" onclick="slide(this,-1)">‹</button>
+                    <button class="slide-btn next" onclick="slide(this,1)">›</button>
+                </div>
                 <h3>Dust</h3>
                 <p>A warm bouquet of earthy brown and cream flower candles with baby's breath accents, wrapped in ivory tissue paper and tied with a rose-gold satin ribbon.</p>
                 <span class="price">350 kr</span>
@@ -121,6 +139,11 @@
     </footer>
 
     <script>
+        function slide(btn, dir) {
+            var slides = btn.parentElement.querySelector('.slides');
+            var width = slides.offsetWidth;
+            slides.scrollBy({ left: width * dir, behavior: 'smooth' });
+        }
         function filterProducts(category) {
             document.querySelectorAll('.product-card').forEach(card => {
                 card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
