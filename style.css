@@ -636,8 +636,8 @@ footer p {
 }
 .detail-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
     align-items: start;
 }
 .detail-images .slider {
@@ -646,6 +646,8 @@ footer p {
 .detail-images .slides img {
     aspect-ratio: 1/1;
     object-fit: cover;
+    max-height: 400px;
+    width: 100%;
 }
 .detail-info h1 {
     font-size: 2.5rem;
