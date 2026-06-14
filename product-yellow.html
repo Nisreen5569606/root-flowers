@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It Was All Yellow — Root</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">Root</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        </div>
+    </nav>
+
+    <section class="product-detail">
+        <div class="detail-grid">
+            <div class="detail-images">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/it-was-all yellow.jpg" alt="It Was All Yellow">
+                        <img src="images/it-was-all yellow2.jpg" alt="It Was All Yellow – close up">
+                    </div>
+                    <button class="slide-btn prev" onclick="slide(this,-1)">‹</button>
+                    <button class="slide-btn next" onclick="slide(this,1)">›</button>
+                </div>
+            </div>
+            <div class="detail-info">
+                <a href="products.html" class="back-link">← Back to products</a>
+                <h1>It Was All Yellow</h1>
+                <span class="price">349 kr</span>
+                <p>A sunshine-filled pipe cleaner bouquet with yellow lilies, tulips, and daisies wrapped in mint green paper with a cheerful yellow ribbon. Comes with a "You are sunshine" card.</p>
+                <ul class="detail-list">
+                    <li>Handmade pipe cleaner flowers</li>
+                    <li>Yellow lilies, tulips, and daisies</li>
+                    <li>Wrapped in mint green paper</li>
+                    <li>Includes "You are sunshine" card</li>
+                    <li>Everlasting — never wilts</li>
+                </ul>
+                <button class="btn" onclick="addToCart('It Was All Yellow', 349)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <span class="brand">Root</span>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© 2026 Root. Handmade in Sweden.</p>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

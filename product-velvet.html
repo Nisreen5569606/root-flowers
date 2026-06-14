@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Violet — Root</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="brand">Root</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        </div>
+    </nav>
+
+    <section class="product-detail">
+        <div class="detail-grid">
+            <div class="detail-images">
+                <div class="slider">
+                    <div class="slides">
+                        <img src="images/velvet1.jpg" alt="Velvet Violet">
+                        <img src="images/velvet2.jpg" alt="Velvet Violet – close up">
+                        <img src="images/velvet3.jpg" alt="Velvet Violet – top view">
+                    </div>
+                    <button class="slide-btn prev" onclick="slide(this,-1)">‹</button>
+                    <button class="slide-btn next" onclick="slide(this,1)">›</button>
+                </div>
+            </div>
+            <div class="detail-info">
+                <a href="products.html" class="back-link">← Back to products</a>
+                <h1>Velvet Violet</h1>
+                <span class="price">299 kr</span>
+                <p>A lush basket of purple pipe cleaner daisies and lilies with a lavender stem accent. Presented in a woven basket with a purple satin ribbon.</p>
+                <ul class="detail-list">
+                    <li>Handmade pipe cleaner flowers</li>
+                    <li>Purple daisies and lilies</li>
+                    <li>Woven basket included</li>
+                    <li>Lavender stem accent</li>
+                    <li>Everlasting — never wilts</li>
+                </ul>
+                <button class="btn" onclick="addToCart('Velvet Violet', 299)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <span class="brand">Root</span>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="shipping.html">Shipping</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© 2026 Root. Handmade in Sweden.</p>
+        </div>
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>
