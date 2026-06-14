@@ -630,7 +630,7 @@ footer p {
 
 /* Product detail page */
 .product-detail {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 3rem auto;
     padding: 0 2rem;
 }
@@ -639,6 +639,13 @@ footer p {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+}
+.detail-images .slider {
+    max-width: 400px;
+}
+.detail-images .slides img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
 }
 .detail-info h1 {
     font-size: 2.5rem;
